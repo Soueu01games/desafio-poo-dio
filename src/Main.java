@@ -36,28 +36,38 @@ public class Main {
         Dev devCamila = new Dev();
         devCamila.setNome("Camila");
         devCamila.inscreverBootcamp(bootcamp);
-        System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
+        
+        System.out.println("======= Dados do Desenvolvedor Camila =======");
+        System.out.println("Conteúdos Inscritos:");
+        devCamila.getConteudosInscritos().forEach(conteudo -> System.out.println(" - " + conteudo.getTitulo()));
         devCamila.progredir();
         devCamila.progredir();
-        System.out.println("-");
-        System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
-        System.out.println("Conteúdos Concluídos Camila:" + devCamila.getConteudosConcluidos());
-        System.out.println("XP:" + devCamila.calcularTotalXp());
-
-        System.out.println("-------");
+        System.out.println("\nApós Progredir:");
+        System.out.println("Conteúdos Inscritos:");
+        devCamila.getConteudosInscritos().forEach(conteudo -> System.out.println(" - " + conteudo.getTitulo()));
+        System.out.println("Conteúdos Concluídos:");
+        devCamila.getConteudosConcluidos().forEach(conteudo -> System.out.println(" - " + conteudo.getTitulo()));
+        System.out.println("XP Total: " + devCamila.calcularTotalXp());
+        
+        System.out.println("\n===========================================\n");
 
         Dev devJoao = new Dev();
-        devJoao.setNome("Joao");
+        devJoao.setNome("João");
         devJoao.inscreverBootcamp(bootcamp);
-        System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
+        
+        System.out.println("======= Dados do Desenvolvedor João =======");
+        System.out.println("Conteúdos Inscritos:");
+        devJoao.getConteudosInscritos().forEach(conteudo -> System.out.println(" - " + conteudo.getTitulo()));
         devJoao.progredir();
         devJoao.progredir();
         devJoao.progredir();
-        System.out.println("-");
-        System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
-        System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
-        System.out.println("XP:" + devJoao.calcularTotalXp());
-
+        System.out.println("\nApós Progredir:");
+        System.out.println("Conteúdos Inscritos:");
+        devJoao.getConteudosInscritos().forEach(conteudo -> System.out.println(" - " + conteudo.getTitulo()));
+        System.out.println("Conteúdos Concluídos:");
+        devJoao.getConteudosConcluidos().forEach(conteudo -> System.out.println(" - " + conteudo.getTitulo()));
+        System.out.println("XP Total: " + devJoao.calcularTotalXp());
+        
+        System.out.println("\n===========================================\n");
     }
-
 }
